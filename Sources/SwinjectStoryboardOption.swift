@@ -28,6 +28,10 @@ internal struct SwinjectStoryboardOption: ServiceKeyOption {
         return controllerType.hashValue
     }
     
+    func hash(into: inout Hasher) {
+        into.combine(self.hashValue)
+    }
+    
     internal var description: String {
         return "Storyboard: \(controllerType)"
     }
